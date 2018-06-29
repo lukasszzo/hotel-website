@@ -1,1 +1,1 @@
-# hotel-website
+# olimp-website
