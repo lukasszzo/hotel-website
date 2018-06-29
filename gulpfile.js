@@ -15,7 +15,6 @@ const handleError = function(err) {
 gulp.task('browser-sync', function() {
     browserSync.init({
         notify: false,
-        // open: false, //czy otwierac strone
         server: {
             baseDir: "./"
         }
@@ -23,7 +22,7 @@ gulp.task('browser-sync', function() {
 });
 
 
-gulp.task('sass', function () {    
+gulp.task('sass', function () {
     return gulp.src('./scss/style.scss')
         .pipe(plumber({
             errorHandler: handleError
@@ -51,4 +50,3 @@ gulp.task('default', function() {
     console.log('##### rozpoczynam prace #####');
     gulp.start(['sass', 'watch', 'browser-sync']);
 });
-
