@@ -426,7 +426,7 @@ body {
 			text-align: center;
 			width:90%;
 			max-width: 700px;
-		
+
 		}
 	}
 
@@ -450,3 +450,235 @@ body {
 			}
 		}
 	}
+
+	.main-news {
+		.container {
+			display: flex;
+			padding:30px 0 130px 0;
+		}
+		.news-box {
+			margin:10px;
+			font-family: Roboto sans-serif;
+			text-align: center;
+			padding: 0 10px;
+		}
+		.news-box-graphic {
+			img {
+				width: 220px;
+
+			}
+		}
+		.news-box-title {
+			font-size:17px;
+			margin:20px 0;
+			text-align: center;
+			font-weight: bold;
+
+			a {
+				color:#222;
+				text-decoration: none;
+			}
+		}
+		.news-box-content {
+			font-size:14px;
+			text-align: center;
+			color:#ddd;
+		}
+		.news-box-btn {
+			margin-top:30px;
+		}
+	}
+
+	@media screen and (max-width:800px) {
+		.main-news {
+			.container {
+				flex-direction: column;
+				align-items: center;
+			}
+			.news-box {
+				max-width: 500px;
+				margin-bottom:60px;
+				&:last-child {
+					margin-bottom: 0;
+				}
+			}
+		}}
+		.main-newsletter {
+			background: orange;
+			padding:60px 0;
+
+			.container {
+			}
+			.main-newsletter-form {
+				display: flex;
+				justify-content: center;
+
+				label {
+					display: none;
+				}
+				input[type=text],
+				input[type=email] {
+					padding:20px;
+					height:50px;
+					border:0;
+					border-radius: 5px;
+					display: block;
+					width:100%;
+				}
+
+				.main-newsletter-submit {
+					background: none;
+					height:50px;
+					padding:15px 30px;
+					border:1px solid #fff;
+					color:#fff;
+					text-transform: uppercase;
+					border-radius: 5px;
+					display: block;
+					width: 100%;
+					font-family: Roboto sans-serif;
+					font-weight: bold;
+					text-decoration: none;
+					position: relative;
+					z-index: 1;
+					cursor: pointer;
+					box-shadow: inset 0 0 0 0 #fff;
+					transition: 0.4s box-shadow;
+
+					&:hover {
+						box-shadow:inset 0 0 0 40px #fff;
+						color:orange;
+					}
+				}
+			}
+			.main-newsletter-title {
+				color:#fff;
+				text-align: center;
+				font-size:30px;
+				font-weight:100;
+				margin-bottom: 30px;
+			}
+			.main-newsletter-row {
+				padding-right:20px;
+				flex-grow: 1;
+
+				&:last-of-type {
+					margin-right:0;
+				}
+			}
+			.main-newsletter-submit {}
+		}
+
+		@media screen and (max-width:780px) {
+			.main-newsletter {
+				.main-newsletter-form {
+					flex-wrap: wrap;
+				}
+				.main-newsletter-row {
+					padding:0;
+					padding-bottom:20px;
+
+					&:first-of-type {
+						padding-right:20px;
+					}
+
+					&:last-of-type {
+						flex-basis: 100%;
+					}
+				}
+			}
+		}
+
+		@media screen and (max-width:780px) {
+			.main-newsletter {
+				.main-newsletter-form {
+					flex-direction: column;
+				}
+				.main-newsletter-row {
+					&:first-of-type {
+						padding-right:0;
+					}
+				}
+			}
+		}
+		.main-map {
+			height:485px;
+			background: #eee;
+		}
+		.main-footer {
+			background: #252525;
+			padding:50px 0;
+
+			.footer-cnt {
+				display: flex;
+			}
+			.footer-logo {}
+			.footer-cnt {}
+			.footer-logo {
+				margin-bottom:40px;
+				background: url(../images/icons8-grecki-filar-50.png);
+				width:154px;
+				height:39px;
+			}
+			.footer-nav {
+				list-style: none;
+				margin:0;
+				padding:0;
+				padding-right:50px;
+
+				li {
+					padding-bottom: 6px;
+				}
+				a {
+					color: #DDD;
+					text-decoration: none;
+					transition: 0.3s color;
+
+					&:hover {
+						color:blue;
+					}
+				}
+			}
+			.copyright {
+				color:#666;
+				font-size:0.8rem;
+				margin-left: auto;
+			}
+		}
+
+		@media screen and (max-width:600px) {
+			.main-footer {
+				display: flex;
+				justify-content: center;
+
+				.footer-cnt {
+					flex-wrap: wrap;
+				}
+				.footer-nav {
+					padding-right: 0;
+					flex-basis: 50%;
+				}
+				.copyright {
+					margin-top:40px;
+					flex-basis: 100%;
+				}
+			}
+		}
+
+		@media screen and (max-width:400px) {
+			.main-footer {
+				.footer-cnt {
+					flex-direction: column;
+					align-items: center;
+				}
+				.footer-nav {
+					margin-bottom: 30px;
+					text-align: center;
+				}
+				.copyright {
+					display: block;
+					margin-top:10px;
+					text-align: center;
+					margin-left: 0;
+				}
+			}}
